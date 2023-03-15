@@ -62,12 +62,24 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: 
+
+      *For the create it gave me this message POST http://localhost:4000/toys 500 (Internal Server Error) and in the terminal where I was running the server it was written NameError (uninitialized constant ToysController::Toys): hence I knew it was a Syntax error in naming the Toy class instead of Toy it was Toys hence I fixed that and I was able to post an empty toy. I didn't do error message handling hence that was possible. 
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: 
+
+      *For the update it gave me this message Uncaught (in promise) SyntaxError: Unexpected end of JSON input hence I went to check the controller action and made sure to render json and after doing that I was able to update the likes of the toys
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+
+      *For the delete(donate) it gave me this message of DELETE http://localhost:4000/toys/3 404 (Not Found) hence I went to check in the resources to check if the destroy was stated and it wasn't hence it was looking for something that was not there. Fixed that and was able to donate the toys .
+
+
+
+### Summary 
+
+  - For the errors I started with fixing the delete(Donate), update(No of likes) and create . Although it was backwards I finished what I had to do
